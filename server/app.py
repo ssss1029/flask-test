@@ -26,6 +26,8 @@ def filePingPayload():
     with open(NUMBER_UPLOAD_FNAME, "r") as fp:
         number = int(fp.readline())
     
+    print("Server recieved file upload with contents: {0}".format(number))
+
     with open(NUMBER_UPLOAD_FNAME, "w") as fp:
         fp.write(str(number + 1))
 
